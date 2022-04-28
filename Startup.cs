@@ -1,3 +1,5 @@
+using Challenge.Repositories.Middleware;
+using Challenge.Services.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +29,8 @@ namespace Challenge
         public void ConfigureServices(IServiceCollection services)
         {
 
+            DIRServices.AddRegistration(services);
+            DIRRepositories.AddRegistration(services);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

@@ -193,23 +193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mdriguera\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\A\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mdriguera\\Documents\\Repositorios\\Exament\\BackendChallenge\\BackendChallenge\\Challenge\\Challenge.csproj",
+      "projectUniqueName": "C:\\Users\\A\\Documents\\Trabajo\\Repositorios\\Challenge\\Challenge\\Challenge.csproj",
       "projectName": "Challenge",
-      "projectPath": "C:\\Users\\mdriguera\\Documents\\Repositorios\\Exament\\BackendChallenge\\BackendChallenge\\Challenge\\Challenge.csproj",
-      "packagesPath": "C:\\Users\\mdriguera\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mdriguera\\Documents\\Repositorios\\Exament\\BackendChallenge\\BackendChallenge\\Challenge\\obj\\",
+      "projectPath": "C:\\Users\\A\\Documents\\Trabajo\\Repositorios\\Challenge\\Challenge\\Challenge.csproj",
+      "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\A\\Documents\\Trabajo\\Repositorios\\Challenge\\Challenge\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mdriguera\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -256,7 +252,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
