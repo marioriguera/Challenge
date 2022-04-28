@@ -1,11 +1,10 @@
-namespace Challenge.Repositories.Models
+namespace Challenge.Services.DTOs
 {
-    public class Inmueble
+    public class InmuebleDto
     {
-        public int Id { get; set; }
         public string AgencyId { get; set; }
         public double? Price { get; set; }
-        public Location Location { get; set; }
+        public LocationDto Location { get; set; }
         public string OperationType { get; set; }
         public string Type { get; set; }
         public int? Rooms { get; set; }

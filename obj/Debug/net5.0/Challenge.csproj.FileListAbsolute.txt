@@ -54,3 +54,4 @@ C:\Users\A\Documents\Trabajo\Repositorios\Challenge\Challenge\obj\Debug\net5.0\r
 C:\Users\A\Documents\Trabajo\Repositorios\Challenge\Challenge\obj\Debug\net5.0\Challenge.pdb
 C:\Users\A\Documents\Trabajo\Repositorios\Challenge\Challenge\obj\Debug\net5.0\Challenge.genruntimeconfig.cache
 C:\Users\A\Documents\Trabajo\Repositorios\Challenge\Challenge\obj\Debug\net5.0\ref\Challenge.dll
+C:\Users\A\Documents\Trabajo\Repositorios\Challenge\Challenge\bin\Debug\net5.0\AutoMapper.dll

@@ -1,4 +1,6 @@
+using AutoMapper;
 using Challenge.Repositories.Middleware;
+using Challenge.Services.MapperFiles;
 using Challenge.Services.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +34,16 @@ namespace Challenge
             DIRServices.AddRegistration(services);
             DIRRepositories.AddRegistration(services);
             services.AddControllers();
+
+            var mapperConfig = new MapperConfiguration(m =>
+            {
+                m.AddProfile(new MappingProfileServices());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddMvcCore();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Challenge", Version = "v1" });
