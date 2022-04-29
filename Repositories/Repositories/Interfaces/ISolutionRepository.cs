@@ -8,5 +8,6 @@ namespace Challenge.Repositories.Repositories.Interfaces
     {
         Task<List<Inmueble>> GetInmueblesAsync();
         Task<Inmueble> UpdateInmuebleAsync(Inmueble inmueble);
+        Task<List<Inmueble>> AddInmuebleAsync(Inmueble inmueble);
     }
 }

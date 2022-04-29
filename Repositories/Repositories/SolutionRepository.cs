@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Challenge.Repositories.Models;
@@ -130,6 +131,34 @@ namespace Challenge.Repositories.Repositories
             else
             {
                 return null;
+            }
+        }
+
+        public async Task<List<Inmueble>> AddInmuebleAsync(Inmueble inmueble)
+        {
+            bool flag = false;
+            foreach (var loc in inmueble.GetType().GetProperties())
+            {
+                if (loc.Name != "Id")
+                {
+                    var valor = loc.GetValue(inmueble);
+                    if (valor != null)
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+            }
+            if (flag == true)
+            {
+                inmueble.Id = ++inmuebles.OrderByDescending(x => x.Id).First().Id;
+                Console.WriteLine("El id asignado es: " + inmueble.Id);
+                inmuebles.Add(inmueble);
+                return inmuebles;
+            }
+            else
+            {
+                throw new Exception("El inmueble que agrega no puede estar vacio");
             }
         }
     }

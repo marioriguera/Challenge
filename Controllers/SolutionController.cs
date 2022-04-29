@@ -5,6 +5,11 @@ using Challenge.Services.DTOs;
 using Challenge.Services.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
+/// <summary>
+/// Evidentemente es una posibilidad que la Location podria ser un seleccionable en la vista y 
+/// al enviar a la api solo viajaria el id de ser cambiado. 
+/// </summary>
+
 namespace Challenge.Controllers
 {
     [ApiController]
@@ -46,10 +51,27 @@ namespace Challenge.Controllers
                 if (inmuebleAct != null)
                 {
                     return Ok(MessageResponse<InmuebleDto>.success(inmuebleAct));
-                }else
-                {
-                    return Ok(MessageResponse<string>.fail("El inmueble a actualizar no existe."));
                 }
+                else
+                {
+                    return Ok(MessageResponse<string>.fail("El inmueble para actualizar no existe."));
+                }
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(MessageResponse<String>.fail(ex.Message));
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<MessageResponse<List<InmuebleDto>>>> AddInmueble([FromBody] InmuebleDto inmueble)
+        {
+            try
+            {
+
+                var inmuebles = await this._solutionService.AddInmuebleAsync(inmueble);
+                return Ok(MessageResponse<List<InmuebleDto>>.success(inmuebles));
+
             }
             catch (System.Exception ex)
             {

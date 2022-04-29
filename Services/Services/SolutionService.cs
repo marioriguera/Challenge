@@ -33,5 +33,12 @@ namespace Challenge.Services.Services
             var inmuebleAct = await _solutionRepository.UpdateInmuebleAsync(_mapper.Map<Inmueble>(inmuebleDto));
             return _mapper.Map<InmuebleDto>(inmuebleAct);
         }
+
+        public async Task<List<InmuebleDto>> AddInmuebleAsync(InmuebleDto inmuebleDto)
+        {
+            var inmuebles = await _solutionRepository.AddInmuebleAsync(_mapper.Map<Inmueble>(inmuebleDto));
+            List<InmuebleDto> inmuebleDtos = inmuebles.Select(x => _mapper.Map<InmuebleDto>(x)).ToList();
+            return inmuebleDtos;
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace Challenge.Services.Services.Interfaces
     {
         Task<List<InmuebleDto>> GetInmueblesAsync();
         Task<InmuebleDto> UpdateInmuebleAsync(InmuebleDto inmuebleDto);
+        Task<List<InmuebleDto>> AddInmuebleAsync(InmuebleDto inmuebleDto);
     }
 }
