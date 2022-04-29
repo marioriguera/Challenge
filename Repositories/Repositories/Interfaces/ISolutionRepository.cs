@@ -7,5 +7,6 @@ namespace Challenge.Repositories.Repositories.Interfaces
     public interface ISolutionRepository
     {
         Task<List<Inmueble>> GetInmueblesAsync();
+        Task<Inmueble> UpdateInmuebleAsync(Inmueble inmueble);
     }
 }

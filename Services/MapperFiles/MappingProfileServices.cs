@@ -10,6 +10,8 @@ namespace Challenge.Services.MapperFiles
         {
             CreateMap<Location, LocationDto>();
             CreateMap<Inmueble, InmuebleDto>();
+            CreateMap<LocationDto, Location>();
+            CreateMap<InmuebleDto, Inmueble>();
         }
     }
 }
